@@ -282,6 +282,7 @@ class frmUser(WinForms.Form):
                 #{
                 #    //do something
                 #}
+                
                 dlgResult = MessageBox.Show("Are you sure you want to delete this user?","Delete User",MessageBoxButtons.YesNo)
                 if (dlgResult == DialogResult.Yes):
                         user = self.getUserInfo(self.current_user_id)
