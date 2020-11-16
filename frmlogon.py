@@ -98,7 +98,7 @@ class frmLogon(WinForms.Form):
 		self.Controls.Add(self._btnCancel)
 		self.Controls.Add(self._btnLogon)
 		self.Font = System.Drawing.Font("Tahoma", 8, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0)
-		self.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+		self.FormBorderStyle = System.Windows.Forms.FormBorderStyle
 		self._Name = "frmLogon"
 		self.ShowInTaskbar = False
 		self.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -142,7 +142,7 @@ class frmLogon(WinForms.Form):
 	def txtPassword_GotFocus(self, sender, e):
 		self._txtPassword.SelectAll()
 
-   	def agoy(self):
+	def agoy(self):
 		WinForms.Application.Run(self)
     
         

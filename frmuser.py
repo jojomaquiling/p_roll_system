@@ -202,10 +202,10 @@ class frmUser(WinForms.Form):
 		self.Text = "User Management"
 		self._groupBox1.ResumeLayout(False)
 		self._groupBox1.PerformLayout()
-                self.ResumeLayout(False)
-        	self._btnClose.Click += self.btnCancel_Click
-        	self._txtPassword.Enabled = False
-        	self.Load += self.LoadData
+		self.ResumeLayout(False)
+		self._btnClose.Click += self.btnCancel_Click
+		self._txtPassword.Enabled = False
+		self.Load += self.LoadData
 		self.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
 
 	def create_interval_record_table(self):
@@ -252,7 +252,7 @@ class frmUser(WinForms.Form):
 			self._btnAddUpdate.Text = "Add"
 			self._txtUsername.Enabled = True
 			self._btnDelete.Enabled = False
-                        self._cboUserLevel.SelectedIndex = self._cboUserLevel.FindString("4")		
+			self._cboUserLevel.SelectedIndex = self._cboUserLevel.FindString("4")		
 			self._txtUsername.Focus()
 
 	def SelectionChanged(self,sender,e):
@@ -331,7 +331,7 @@ class frmUser(WinForms.Form):
 		
 
 
-   	def agoy(self):
+	def agoy(self):
 		WinForms.Application.Run(self)
     
         

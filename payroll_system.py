@@ -1,5 +1,8 @@
 import clr
+
+clr.AddReference('System.Windows.Forms')
 import System.Windows.Forms as WinForms
+
 clr.AddReference("BaseForm")
 import BaseForm
 
@@ -13,6 +16,8 @@ import frmuser
 import frmdbsetup
 
 from frmlogon import frmLogon
+
+
 
 class MainForm(BaseForm.frmMyBaseForm):
         def __init__(self):
@@ -226,7 +231,8 @@ class MainForm(BaseForm.frmMyBaseForm):
                 self._userManagementToolStripMenuItem.Name = "userManagementToolStripMenuItem"
                 self._userManagementToolStripMenuItem.Size = System.Drawing.Size(171, 22)
                 self._userManagementToolStripMenuItem.Text = "User Management"
-		self._userManagementToolStripMenuItem.Click += self._Load 
+                self._userManagementToolStripMenuItem.Click += self._Load
+
                 # 
                 # accessConfigToolStripMenuItem
                 # 
@@ -269,9 +275,10 @@ class MainForm(BaseForm.frmMyBaseForm):
                 self.PerformLayout()
                 
                 self.WindowState = WinForms.FormWindowState.Maximized #Windows is Maximized by default
-		self.AppTitle = "GemSoft Systems" #Application title
-		self.LowerColor = System.Drawing.Color.Green
-		#self.Load += self._Load
+
+                self.AppTitle = "GemSoft Systems" #Application title
+                self.LowerColor = System.Drawing.Color.Green
+                self.Load += self._Load
 
         def ToolStripMenuItem1Click(self, sender, e):
                 pass
@@ -281,15 +288,15 @@ class MainForm(BaseForm.frmMyBaseForm):
 
         def QuitToolStripMenuItemClick(self, sender, e):
                 self.Close()
-	
-	def _Load(self,sender, e):
-		#frmLogon_ = frmLogon()
-		#frmLogon_.ShowDialog(self)
-		frmuser_ = frmuser.frmUser()
-		frmuser_.MdiParent = self
-		frmuser_.Show()
-
-	def LoadDBSetup(self,sender,e):
+        
+        def _Load(self,sender, e):
+                #frmLogon_ = frmLogon()
+                #frmLogon_.ShowDialog(self)
+                frmuser_ = frmuser.frmUser()
+                frmuser_.MdiParent = self
+                frmuser_.Show()
+        
+        def LoadDBSetup(self,sender,e):
                 frmdbsetup_ = frmdbsetup.frmDBSetup()
                 frmdbsetup_.Owner = self
                 #frmdbsetup_.MdiParent = self

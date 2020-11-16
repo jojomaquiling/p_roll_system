@@ -279,7 +279,7 @@ class frmDBSetup(System.Windows.Forms.Form):
 			connection = SqlConnection(GetConnectionString)
 			connection.Open()
 			return True
-		except Exception, ex:
+		except Exception as ex:
 			return False
 		finally:
 			connection.Close()
@@ -319,7 +319,7 @@ class frmDBSetup(System.Windows.Forms.Form):
 			sw = StreamWriter(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + Application.CompanyName + "\\DBConStr.ini")
 			sw.WriteLine(GetConnectionString)
 			sw.Close()
-		except Exception, ex:
+		except Exception as ex:
 			self.MsgBox(ex.Message)
 		finally:
 			pass
@@ -364,7 +364,7 @@ class frmDBSetup(System.Windows.Forms.Form):
 		if e.KeyCode == Keys.Enter:
 			SendKeys.Send("{TAB}")
 
-   	def agoy(self):
+	def agoy(self):
 		WinForms.Application.Run(self)
     
         
